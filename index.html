@@ -1,21 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="te">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Darshana Sethu Cab</title>
+
 <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-<div class="box">
+
+<div class="container">
+
+<img src="logo.png" class="logo" alt="Logo">
+
 <h1>🚖 Darshana Sethu Cab</h1>
-<p>మీ ప్రయాణం... మా బాధ్యత</p>
-<input id="name" placeholder="Customer Name">
-<input id="phone" placeholder="Phone Number">
-<input id="pickup" placeholder="Pickup">
-<input id="drop" placeholder="Drop">
-<button onclick="sendBooking()">Book on WhatsApp</button>
+
+<p class="tagline">మీ ప్రయాణం... మా బాధ్యత</p>
+
+<label>👤 Customer Name</label>
+<input type="text" id="name" placeholder="Enter Customer Name">
+
+<label>📞 Phone Number</label>
+<input type="tel" id="phone" placeholder="Enter Phone Number">
+
+<label>📍 Pickup Location</label>
+<input type="text" id="pickup" placeholder="Enter Pickup">
+
+<label>📍 Drop Location</label>
+<input type="text" id="drop" placeholder="Enter Drop">
+
+<label>🚘 Trip Type</label>
+<select id="trip">
+<option value="One Way">🚖 One Way</option>
+<option value="Round Trip">🔄 Round Trip</option>
+</select>
+
+<label>📅 Journey Date</label>
+<input type="date" id="date">
+
+<label>🕒 Pickup Time</label>
+<input type="time" id="time">
+
+<label>👥 Number of Passengers</label>
+<input type="number" id="passengers" placeholder="Passengers">
+
+<button onclick="sendBooking()">🚖 Submit Booking</button>
+
+<div id="successBox" style="display:none;margin-top:20px;padding:15px;background:#d4edda;border-radius:10px;text-align:center;">
+
+<h3>✅ Booking Request Sent Successfully</h3>
+
+<p id="bookingResult"></p>
+
+<p>
+🙏 Thank you for choosing Darshana Sethu Cab.<br>
+మా ప్రతినిధి త్వరలో మిమ్మల్ని సంప్రదిస్తారు.
+</p>
+
 </div>
+
+</div>
+
 <script src="script.js"></script>
+
 </body>
 </html>
