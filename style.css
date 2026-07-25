@@ -1,52 +1,70 @@
 body{
     margin:0;
-    padding:0;
-    font-family:Arial,sans-serif;
+    padding:20px;
     background:#f2f2f2;
+    font-family:Arial,sans-serif;
 }
 
-.box{
-    max-width:420px;
-    margin:40px auto;
+.container{
+    max-width:450px;
+    margin:auto;
     background:#fff;
     padding:20px;
     border-radius:15px;
-    box-shadow:0 4px 12px rgba(0,0,0,0.2);
-    text-align:center;
+    box-shadow:0 0 15px rgba(0,0,0,.2);
+}
+
+.logo{
+    display:block;
+    width:150px;
+    height:150px;
+    margin:0 auto;
+    border-radius:50%;
+    object-fit:cover;
 }
 
 h1{
-    color:#222;
-    margin-bottom:10px;
+    text-align:center;
+    color:#ff6600;
+    margin-top:10px;
 }
 
-p{
-    color:#555;
-    margin-bottom:20px;
+.tagline{
+    text-align:center;
+    font-weight:bold;
+    color:#444;
+    margin:15px 0;
 }
 
-input{
+label{
+    display:block;
+    margin-top:15px;
+    font-weight:bold;
+}
+
+input,
+select{
     width:100%;
     padding:12px;
-    margin:8px 0;
+    margin-top:5px;
     border:1px solid #ccc;
-    border-radius:8px;
-    box-sizing:border-box;
+    border-radius:10px;
     font-size:16px;
+    box-sizing:border-box;
 }
 
 button{
     width:100%;
-    padding:14px;
-    background:#25D366;
-    color:white;
+    padding:15px;
+    margin-top:20px;
+    background:#28a745;
+    color:#fff;
     border:none;
-    border-radius:8px;
+    border-radius:10px;
     font-size:18px;
     cursor:pointer;
-    margin-top:10px;
 }
 
 button:hover{
-    background:#1ebc57;
+    background:#218838;
 }
