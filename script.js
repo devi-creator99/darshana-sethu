@@ -1,3 +1,4 @@
+
 function sendBooking() {
     const name = document.getElementById("name").value.trim();
     const phone = document.getElementById("phone").value.trim();
@@ -17,8 +18,7 @@ function sendBooking() {
 📍 Pickup: ${pickup}
 🏁 Drop: ${drop}`;
 
-    // ఇక్కడ నీ WhatsApp నంబర్ పెట్టు (91 తర్వాత నీ 10-digit నంబర్)
-    const whatsappNumber = "91XXXXXXXXXX";
+    const whatsappNumber = "919491172851";
 
     const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
