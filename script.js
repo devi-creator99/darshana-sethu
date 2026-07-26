@@ -1,64 +1,96 @@
-function sendBooking() {
+function generateBookingID() {
+    const now = new Date();
 
-  let name = document.getElementById("name").value.trim();
-  let phone = document.getElementById("phone").value.trim();
-  let pickup = document.getElementById("pickup").value.trim();
-  let drop = document.getElementById("drop").value.trim();
-  let trip = document.getElementById("trip").value;
-  let date = document.getElementById("date").value;
-  let time = document.getElementById("time").value;
-  let passengers = document.getElementById("passengers").value.trim();
+    const yy = now.getFullYear().toString().slice(-2);
+    const mm = String(now.getMonth() + 1).padStart(2, "0");
+    const dd = String(now.getDate()).padStart(2, "0");
 
-  if (
-    !name ||
-    !phone ||
-    !pickup ||
-    !drop ||
-    !date ||
-    !time ||
-    !passengers
-  ) {
-    alert("అన్ని వివరాలు నమోదు చేయండి.");
-    return;
-  }
+    const random = Math.floor(1000 + Math.random() * 9000);
 
-  let bookingID =
-    "DS-" +
-    new Date().getFullYear() +
-    "-" +
-    Math.floor(100000 + Math.random() * 900000);
+    return `DS${yy}${mm}${dd}-${random}`;
+}
 
-  document.getElementById("successBox").style.display = "block";
-  document.getElementById("bookingResult").innerHTML =
-    "🆔 Booking ID: <b>" + bookingID + "</b>";
+function submitBooking() {
 
-  let message =
-`🚖 Darshana Sethu Cab Booking
+    const bookingId = generateBookingID();
 
-🆔 Booking ID: ${bookingID}
+    const name = document.getElementById("name").value.trim().toUpperCase();
+    const phone = document.getElementById("phone").value.trim();
+    const pickup = document.getElementById("pickup").value.trim();
+    const drop = document.getElementById("drop").value.trim();
+    const trip = document.getElementById("trip").value;
+    const date = document.getElementById("date").value;
+    const time = document.getElementById("time").value;
+    const passengers = document.getElementById("passengers").value;
 
-👤 Customer Name: ${name}
-📞 Phone Number: ${phone}
+    if (
+        !name ||
+        !phone ||
+        !pickup ||
+        !drop ||
+        !date ||
+        !time ||
+        !passengers
+    ) {
+        alert("⚠️ Please fill all details.\nదయచేసి అన్ని వివరాలు నమోదు చేయండి.");
+        return;
+    }
 
-📍 Pickup: ${pickup}
-📍 Drop: ${drop}
+    const message =
+`🚖══════════════════════🚖
+DARSHANA SETHU CAB SERVICE
+"మీ ప్రయాణం... మా బాధ్యత"
+🚖══════════════════════🚖
 
-🚘 Trip Type: ${trip}
+🎉 BOOKING SUCCESSFULLY RECEIVED
+✅ బుకింగ్ విజయవంతంగా స్వీకరించబడింది
 
-📅 Journey Date: ${date}
-🕒 Pickup Time: ${time}
+━━━━━━━━━━━━━━━━━━
+🆔 BOOKING ID
+${bookingId}
+━━━━━━━━━━━━━━━━━━
 
-👥 Passengers: ${passengers}
+👤 CUSTOMER NAME
+${name}
 
-✅ Booking Status: Pending Confirmation
+📞 PHONE
+${phone}
 
-🙏 Thank you for choosing Darshana Sethu Cab.
+📍 PICKUP
+${pickup}
 
-"మీ ప్రయాణం... మా బాధ్యత."`;
+📍 DROP
+${drop}
 
-  let whatsapp =
-    "https://wa.me/919491172851?text=" +
-    encodeURIComponent(message);
+🚘 TRIP
+${trip}
 
-  window.open(whatsapp, "_blank");
+📅 DATE
+${date}
+
+🕒 TIME
+${time}
+
+👥 PASSENGERS
+${passengers}
+
+⏳ STATUS
+Pending Confirmation
+నిర్ధారణ కోసం వేచి ఉండండి
+
+📞 మా టీమ్ త్వరలో మిమ్మల్ని సంప్రదిస్తుంది.
+
+🙏 Thank you for choosing
+Darshana Sethu Cab Service`;
+
+    const whatsappNumber = "919491172851";
+
+    window.open(
+        `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`,
+        "_blank"
+    );
+
+    document.getElementById("successBox").style.display = "block";
+    document.getElementById("bookingResult").innerHTML =
+        "🆔 Booking ID: <b>" + bookingId + "</b><br><br>✅ Booking Submitted Successfully.";
 }
