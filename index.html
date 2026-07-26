@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>🚖 Darshana Sethu Cab Service</title>
 
 <link rel="icon" type="image/png" href="logo.png">
@@ -21,22 +22,22 @@ Your Journey... Our Responsibility
 </p>
 
 <label>👤 Customer Name / కస్టమర్ పేరు</label>
-<input type="text" id="name" placeholder="Enter Customer Name / కస్టమర్ పేరు">
+<input type="text" id="name" placeholder="Enter Customer Name">
 
 <label>📞 Phone Number / ఫోన్ నంబర్</label>
-<input type="tel" id="phone" placeholder="Enter Phone Number / ఫోన్ నంబర్">
+<input type="tel" id="phone" placeholder="Enter Phone Number">
 
 <label>📍 Pickup Location / పికప్ స్థలం</label>
-<input type="text" id="pickup" placeholder="Enter Pickup Location / పికప్ స్థలం">
+<input type="text" id="pickup" placeholder="Enter Pickup Location">
 
 <label>📍 Drop Location / డ్రాప్ స్థలం</label>
-<input type="text" id="drop" placeholder="Enter Drop Location / డ్రాప్ స్థలం">
+<input type="text" id="drop" placeholder="Enter Drop Location">
 
-<label>🚖 Trip Type / ప్రయాణ రకం</label>
+<label>🚘 Trip Type / ప్రయాణ రకం</label>
 <select id="trip">
-<option value="">Select / ఎంచుకోండి</option>
-<option value="One Way">🚖 One Way / ఒకే దారి</option>
-<option value="Round Trip">🔄 Round Trip / రౌండ్ ట్రిప్</option>
+<option value="">Select Trip Type</option>
+<option value="One Way">🚖 One Way</option>
+<option value="Round Trip">🔄 Round Trip</option>
 </select>
 
 <label>📅 Journey Date / ప్రయాణ తేదీ</label>
@@ -44,38 +45,23 @@ Your Journey... Our Responsibility
 
 <label>🕒 Pickup Time / పికప్ సమయం</label>
 <input type="time" id="time">
+
 <label>👥 Number of Passengers / ప్రయాణికుల సంఖ్య</label>
-<input type="number" id="passengers"
-placeholder="Enter Number of Passengers / ప్రయాణికుల సంఖ్య నమోదు చేయండి">
+<input type="number" id="passengers" placeholder="Enter Passengers">
 
 <button type="button" onclick="submitBooking()">
 🚖 Submit Booking / బుకింగ్ పంపండి
 </button>
 
 <div id="successBox" style="display:none;">
-
-<h3>
-🎉 Booking Successfully Received<br>
-✅ బుకింగ్ విజయవంతంగా స్వీకరించబడింది
-</h3>
-
+<h3>🎉 Booking Successfully Received</h3>
 <p id="bookingResult"></p>
 
 <p>
-⏳ Please wait a few minutes. Our team will contact you shortly.<br>
-⏳ దయచేసి కొన్ని నిమిషాలు వేచి ఉండండి. మా బృందం త్వరలో మిమ్మల్ని సంప్రదిస్తుంది.
+🙏 Thank you for choosing<br>
+<b>Darshana Sethu Cab Service</b><br><br>
+మా టీమ్ త్వరలో మిమ్మల్ని సంప్రదిస్తుంది.
 </p>
-
-<p>
-🙏 Thank you for choosing Darshana Sethu Cab Service.<br>
-🙏 దర్శన సేతు క్యాబ్ సర్వీస్‌ను ఎంచుకున్నందుకు ధన్యవాదాలు.
-</p>
-
-<p>
-🚖 Your Journey... Our Responsibility<br>
-🚖 మీ ప్రయాణం... మా బాధ్యత
-</p>
-
 </div>
 
 </div>
