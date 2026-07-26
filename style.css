@@ -1,112 +1,95 @@
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Noto Sans Telugu',sans-serif;
-}
-
 body{
-background:#f2f5f7;
-padding:20px;
+    margin:0;
+    padding:20px;
+    background:#f2f5f9;
+    font-family:Arial,sans-serif;
 }
 
 .container{
-max-width:450px;
-margin:auto;
-background:#fff;
-padding:20px;
-border-radius:20px;
-box-shadow:0 5px 20px rgba(0,0,0,.15);
+    max-width:450px;
+    margin:auto;
+    background:#fff;
+    padding:20px;
+    border-radius:20px;
+    box-shadow:0 5px 20px rgba(0,0,0,.15);
 }
 
 .logo{
-width:150px;
-height:150px;
-display:block;
-margin:auto;
-border-radius:50%;
-margin-bottom:15px;
+    width:180px;
+    display:block;
+    margin:0 auto 15px;
 }
 
 h1{
-text-align:center;
-color:#0b4f8c;
-font-size:26px;
-margin-bottom:10px;
+    text-align:center;
+    color:#0d47a1;
+    margin:5px 0;
+    font-size:34px;
+    font-weight:bold;
+}
+
+h2{
+    text-align:center;
+    color:#ff6600;
+    margin:5px 0 15px;
+    font-size:28px;
 }
 
 .tagline{
-text-align:center;
-margin-bottom:20px;
-font-size:16px;
-line-height:1.7;
+    text-align:center;
+    font-size:22px;
+    margin-bottom:20px;
 }
 
 label{
-display:block;
-font-weight:bold;
-margin-top:12px;
-margin-bottom:6px;
+    display:block;
+    margin-top:15px;
+    margin-bottom:8px;
+    font-size:20px;
+    font-weight:bold;
 }
 
-input,select{
-width:100%;
-padding:12px;
-border:1px solid #ccc;
-border-radius:10px;
-font-size:16px;
-}
-
-#name{
-text-transform:uppercase;
-font-weight:bold;
-font-size:18px;
+input,
+select{
+    width:100%;
+    padding:15px;
+    border:2px solid #ccc;
+    border-radius:12px;
+    font-size:20px;
+    box-sizing:border-box;
 }
 
 button{
-width:100%;
-padding:15px;
-margin-top:20px;
-background:#0b7d36;
-color:white;
-font-size:18px;
-font-weight:bold;
-border:none;
-border-radius:12px;
-cursor:pointer;
+    width:100%;
+    margin-top:25px;
+    padding:18px;
+    background:#0b8f3b;
+    color:#fff;
+    border:none;
+    border-radius:12px;
+    font-size:24px;
+    font-weight:bold;
+    cursor:pointer;
 }
 
 button:hover{
-background:#086329;
+    background:#08752f;
 }
 
 #successBox{
-display:none;
-margin-top:20px;
-padding:20px;
-background:#e8fff0;
-border-radius:15px;
-border:2px solid #0b7d36;
-text-align:center;
-}
-
-.booking-id{
-background:#0b4f8c;
-color:white;
-padding:15px;
-border-radius:12px;
-margin:15px 0;
-font-weight:bold;
+    margin-top:25px;
+    padding:20px;
+    border:3px solid green;
+    border-radius:15px;
+    background:#eaffea;
+    text-align:center;
 }
 
 #bookingId{
-font-size:24px;
-color:#ffd700;
-margin-top:8px;
-}
-
-#bookingResult{
-font-size:17px;
-font-weight:bold;
-line-height:1.8;
+    background:#0d47a1;
+    color:#fff;
+    padding:12px;
+    border-radius:10px;
+    font-size:26px;
+    margin:15px 0;
 }
