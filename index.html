@@ -14,55 +14,48 @@
 
 <div class="container">
 
-<h1>🚖 Darshana Sethu Cab Service</h1>
+<img src="logo.png" class="logo" alt="Logo">
+
+<h1>🚖 DARSHANA SETHU CAB SERVICE</h1>
 
 <p class="tagline">
 <b>మీ ప్రయాణం... మా బాధ్యత</b><br>
 Your Journey... Our Responsibility
 </p>
 
-<label>👤 Customer Name / కస్టమర్ పేరు</label>
+<label>👤 Customer Name</label>
 <input type="text" id="name" placeholder="Enter Customer Name">
 
-<label>📞 Phone Number / ఫోన్ నంబర్</label>
+<label>📞 Phone Number</label>
 <input type="tel" id="phone" placeholder="Enter Phone Number">
 
-<label>📍 Pickup Location / పికప్ స్థలం</label>
+<label>📍 Pickup Location</label>
 <input type="text" id="pickup" placeholder="Enter Pickup Location">
 
-<label>📍 Drop Location / డ్రాప్ స్థలం</label>
+<label>📍 Drop Location</label>
 <input type="text" id="drop" placeholder="Enter Drop Location">
 
-<label>🚘 Trip Type / ప్రయాణ రకం</label>
+<label>🚘 Trip Type</label>
 <select id="trip">
 <option value="">Select Trip Type</option>
-<option value="One Way">🚖 One Way</option>
-<option value="Round Trip">🔄 Round Trip</option>
+<option>One Way</option>
+<option>Round Trip</option>
 </select>
 
-<label>📅 Journey Date / ప్రయాణ తేదీ</label>
+<label>📅 Journey Date</label>
 <input type="date" id="date">
 
-<label>🕒 Pickup Time / పికప్ సమయం</label>
+<label>🕒 Pickup Time</label>
 <input type="time" id="time">
 
-<label>👥 Number of Passengers / ప్రయాణికుల సంఖ్య</label>
-<input type="number" id="passengers" placeholder="Enter Passengers">
+<label>👥 Passengers</label>
+<input type="number" id="passengers" placeholder="Passengers">
 
-<button type="button" onclick="submitBooking()">
-🚖 Submit Booking / బుకింగ్ పంపండి
+<button onclick="submitBooking()">
+🚖 BOOK NOW
 </button>
 
-<div id="successBox" style="display:none;">
-<h3>🎉 Booking Successfully Received</h3>
-<p id="bookingResult"></p>
-
-<p>
-🙏 Thank you for choosing<br>
-<b>Darshana Sethu Cab Service</b><br><br>
-మా టీమ్ త్వరలో మిమ్మల్ని సంప్రదిస్తుంది.
-</p>
-</div>
+<div id="successBox"></div>
 
 </div>
 
