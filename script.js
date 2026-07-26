@@ -1,8 +1,7 @@
-
 function generateBookingID() {
     const year = new Date().getFullYear();
     const random = Math.floor(100000 + Math.random() * 900000);
-    return "DS-" + year + "-" + random;
+    return "DSC-" + year + "-" + random;
 }
 
 function submitBooking() {
@@ -16,16 +15,7 @@ function submitBooking() {
     let time = document.getElementById("time").value;
     let passengers = document.getElementById("passengers").value;
 
-    if (
-        name === "" ||
-        phone === "" ||
-        pickup === "" ||
-        drop === "" ||
-        trip === "" ||
-        date === "" ||
-        time === "" ||
-        passengers === ""
-    ) {
+    if (!name || !phone || !pickup || !drop || !trip || !date || !time || !passengers) {
         alert("⚠️ Please fill all details.\nదయచేసి అన్ని వివరాలు నమోదు చేయండి.");
         return;
     }
@@ -40,11 +30,11 @@ function submitBooking() {
 ${bookingId}
 ━━━━━━━━━━━━━━━━━━━━
 
-🎉 BOOKING SUCCESSFULLY RECEIVED
-✅ బుకింగ్ విజయవంతంగా స్వీకరించబడింది
+✅ BOOKING SUCCESSFULLY RECEIVED
+బుకింగ్ విజయవంతంగా స్వీకరించబడింది
 
 👤 CUSTOMER NAME
-*${name}*
+${name}
 
 📞 PHONE
 ${phone}
@@ -70,31 +60,24 @@ ${passengers}
 ⏳ STATUS
 Pending Confirmation
 
-🙏 Thank you for choosing
+🙏 Thank You
 Darshana Sethu Cab Service
 
-🌐 https://devi-creator99.github.io/darshana-sethu/`;
+"మీ ప్రయాణం... మా బాధ్యత"`;
 
     const whatsappNumber = "919491172851";
 
     window.open(
-        "https://wa.me/" +
-        whatsappNumber +
-        "?text=" +
-        encodeURIComponent(message),
+        "https://wa.me/" + whatsappNumber + "?text=" + encodeURIComponent(message),
         "_blank"
     );
 
-    const successBox = document.getElementById("successBox");
-    successBox.style.display = "block";
-    successBox.innerHTML =
-`🎉 Booking Submitted Successfully
+    document.getElementById("bookingId").innerHTML = bookingId;
 
-🆔 Booking ID:
-<b>${bookingId}</b>
+    document.getElementById("bookingResult").innerHTML =
+    "<b>👤 CUSTOMER NAME</b><br>" + name +
+    "<br><br><b>📍 " + pickup + " ➜ " + drop + "</b>" +
+    "<br><br>✅ Booking Received Successfully";
 
-📞 మా టీమ్ త్వరలో మిమ్మల్ని సంప్రదిస్తుంది.
-
-Thank you for choosing
-🚖 Darshana Sethu Cab Service`;
+    document.getElementById("successBox").style.display = "block";
 }
