@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="te">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>🚖 Darshana Sethu Cab Service</title>
 
 <link rel="icon" type="image/png" href="logo.png">
+
 <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
@@ -16,9 +20,9 @@
 
 <img src="logo.png" class="logo" alt="Darshana Sethu Logo">
 
-<h1>🚖 DARSHANA SETHU CAB</h1>
+<h1>🚖 DARSHANA SETHU CAB SERVICE</h1>
 
-<h2>దర్శన సేతు క్యాబ్</h2>
+<h2>దర్శన సేతు క్యాబ్ సర్వీస్</h2>
 
 <p class="tagline">
 <b>మీ ప్రయాణం... మా బాధ్యత</b><br>
@@ -26,30 +30,58 @@ Your Journey... Our Responsibility
 </p>
 
 <label>👤 CUSTOMER NAME / కస్టమర్ పేరు</label>
-<input type="text" id="name" oninput="this.value=this.value.toUpperCase()" placeholder="Enter Customer Name">
+<input
+type="text"
+id="name"
+placeholder="Enter Customer Name"
+oninput="this.value=this.value.toUpperCase()">
 
 <label>📞 PHONE NUMBER / ఫోన్ నంబర్</label>
-<input type="tel" id="phone" placeholder="Enter Mobile Number">
+<input
+type="tel"
+id="phone"
+placeholder="Enter Mobile Number">
 
 <label>📍 PICKUP LOCATION / పికప్ స్థలం</label>
-<input type="text" id="pickup" placeholder="Enter Pickup Location">
+<input
+type="text"
+id="pickup"
+placeholder="Enter Pickup Location">
 
 <label>📍 DROP LOCATION / డ్రాప్ స్థలం</label>
-<input type="text" id="drop" placeholder="Enter Drop Location">
+<input
+type="text"
+id="drop"
+placeholder="Enter Drop Location">
 
 <label>🚖 TRIP TYPE / ప్రయాణ రకం</label>
+
 <select id="trip">
+
 <option value="">Select Trip Type</option>
-<option>🚖 One Way</option>
-<option>🔁 Round Trip</option>
+
+<option value="One Way">
+🚖 One Way
+</option>
+
+<option value="Round Trip">
+🔁 Round Trip
+</option>
+
 </select>
 
 <label>📅 JOURNEY DATE / ప్రయాణ తేదీ</label>
-<input type="date" id="date">
+
+<input
+type="date"
+id="date">
 
 <label>🕒 PICKUP TIME / పికప్ సమయం</label>
+
 <select id="time">
+
 <option value="">Select Time</option>
+
 <option>06:00 AM</option>
 <option>07:00 AM</option>
 <option>08:00 AM</option>
@@ -61,32 +93,55 @@ Your Journey... Our Responsibility
 <option>02:00 PM</option>
 <option>03:00 PM</option>
 <option>04:00 PM</option>
-<option>05:00 pM</option>
+<option>05:00 PM</option>
 <option>06:00 PM</option>
 <option>07:00 PM</option>
 <option>08:00 PM</option>
 <option>09:00 PM</option>
+
 </select>
+  <label>👥 PASSENGERS / ప్రయాణికుల సంఖ్య</label>
 
-<label>👥 PASSENGERS / ప్రయాణికుల సంఖ్య</label>
-<input type="number" id="passengers" placeholder="Enter Passengers">
+<input
+type="number"
+id="passengers"
+placeholder="Enter Number of Passengers">
 
-<button onclick="submitBooking()">
+<button type="button" onclick="submitBooking()">
 🚖 BOOK NOW / బుకింగ్ పంపండి
 </button>
 
 <div id="successBox" style="display:none;">
 
-<h2>🎉 బుకింగ్ విజయవంతంగా నమోదు అయింది</h2>
+<h2>🎉 BOOKING SUCCESSFUL</h2>
 
-<h3 id="bookingId"></h3>
+<h3>🎉 బుకింగ్ విజయవంతంగా నమోదు అయింది</h3>
+
+<div class="booking-id">
+
+🆔 BOOKING ID
+
+<h2 id="bookingId"></h2>
+
+</div>
 
 <p id="bookingResult"></p>
 
 <p>
-📞 మా టీమ్ త్వరలో మిమ్మల్ని సంప్రదిస్తుంది.<br><br>
+
+📞 మా టీమ్ త్వరలో మిమ్మల్ని సంప్రదిస్తుంది.<br>
+Our Team Will Contact You Soon.
+
+</p>
+
+<p>
+
 🙏 దర్శన సేతు క్యాబ్ సర్వీస్‌ను ఎంచుకున్నందుకు ధన్యవాదాలు.<br>
-Thank You for Choosing Darshana Sethu Cab Service.
+
+Thank You For Choosing<br>
+
+<b>Darshana Sethu Cab Service</b>
+
 </p>
 
 </div>
