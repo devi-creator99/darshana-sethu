@@ -1,8 +1,13 @@
-body{
+*{
     margin:0;
-    padding:20px;
-    background:#f2f2f2;
+    padding:0;
+    box-sizing:border-box;
     font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f4f7fb;
+    padding:20px;
 }
 
 .container{
@@ -11,34 +16,25 @@ body{
     background:#fff;
     padding:20px;
     border-radius:15px;
-    box-shadow:0 0 15px rgba(0,0,0,.2);
-}
-
-.logo{
-    display:block;
-    width:150px;
-    height:150px;
-    margin:0 auto;
-    border-radius:50%;
-    object-fit:cover;
+    box-shadow:0 5px 15px rgba(0,0,0,0.15);
 }
 
 h1{
     text-align:center;
-    color:#ff6600;
-    margin-top:10px;
+    color:#ff9800;
+    margin-bottom:10px;
 }
 
 .tagline{
     text-align:center;
-    font-weight:bold;
+    margin-bottom:20px;
     color:#444;
-    margin:15px 0;
 }
 
 label{
     display:block;
     margin-top:15px;
+    margin-bottom:5px;
     font-weight:bold;
 }
 
@@ -46,25 +42,33 @@ input,
 select{
     width:100%;
     padding:12px;
-    margin-top:5px;
     border:1px solid #ccc;
-    border-radius:10px;
+    border-radius:8px;
     font-size:16px;
-    box-sizing:border-box;
 }
 
 button{
     width:100%;
-    padding:15px;
     margin-top:20px;
-    background:#28a745;
+    padding:15px;
+    background:#ff9800;
     color:#fff;
     border:none;
-    border-radius:10px;
+    border-radius:8px;
     font-size:18px;
+    font-weight:bold;
     cursor:pointer;
 }
 
 button:hover{
-    background:#218838;
+    background:#e68900;
+}
+
+#successBox{
+    margin-top:20px;
+    background:#e8f5e9;
+    border:1px solid #4caf50;
+    border-radius:10px;
+    padding:15px;
+    text-align:center;
 }
