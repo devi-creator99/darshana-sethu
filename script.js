@@ -6,17 +6,17 @@ function generateBookingID() {
 
 function submitBooking() {
 
-    let name = document.getElementById("name").value.trim().toUpperCase();
-    let phone = document.getElementById("phone").value.trim();
-    let pickup = document.getElementById("pickup").value.trim();
-    let drop = document.getElementById("drop").value.trim();
-    let trip = document.getElementById("trip").value;
-    let date = document.getElementById("date").value;
-    let time = document.getElementById("time").value;
-    let passengers = document.getElementById("passengers").value;
+    const name = document.getElementById("name").value.trim().toUpperCase();
+    const phone = document.getElementById("phone").value.trim();
+    const pickup = document.getElementById("pickup").value.trim();
+    const drop = document.getElementById("drop").value.trim();
+    const trip = document.getElementById("trip").value;
+    const date = document.getElementById("date").value;
+    const time = document.getElementById("time").value;
+    const passengers = document.getElementById("passengers").value;
 
     if (!name || !phone || !pickup || !drop || !trip || !date || !time || !passengers) {
-        alert("⚠️ Please fill all details.\nదయచేసి అన్ని వివరాలు నమోదు చేయండి.");
+        alert("దయచేసి అన్ని వివరాలు నమోదు చేయండి.\nPlease fill all details.");
         return;
     }
 
@@ -25,39 +25,39 @@ function submitBooking() {
     const message =
 `🚖 DARSHANA SETHU CAB SERVICE
 
-━━━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━━━━━
 🆔 BOOKING ID
 ${bookingId}
-━━━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━━━━━
 
 ✅ BOOKING SUCCESSFULLY RECEIVED
 బుకింగ్ విజయవంతంగా స్వీకరించబడింది
 
-👤 CUSTOMER NAME
+👤 CUSTOMER NAME / కస్టమర్ పేరు
 ${name}
 
-📞 PHONE
+📞 PHONE / ఫోన్
 ${phone}
 
-📍 PICKUP
+📍 PICKUP / పికప్
 ${pickup}
 
-📍 DROP
+📍 DROP / డ్రాప్
 ${drop}
 
-🚘 TRIP
+🚖 TRIP / ప్రయాణ రకం
 ${trip}
 
-📅 DATE
+📅 DATE / తేదీ
 ${date}
 
-🕒 TIME
+🕒 TIME / సమయం
 ${time}
 
-👥 PASSENGERS
+👥 PASSENGERS / ప్రయాణికుల సంఖ్య
 ${passengers}
 
-⏳ STATUS
+⏳ STATUS / స్థితి
 Pending Confirmation
 
 🙏 Thank You
@@ -72,12 +72,13 @@ Darshana Sethu Cab Service
         "_blank"
     );
 
-    document.getElementById("bookingId").innerHTML = bookingId;
+    document.getElementById("bookingId").innerHTML =
+        "🆔 " + bookingId;
 
     document.getElementById("bookingResult").innerHTML =
-    "<b>👤 CUSTOMER NAME</b><br>" + name +
-    "<br><br><b>📍 " + pickup + " ➜ " + drop + "</b>" +
-    "<br><br>✅ Booking Received Successfully";
+        "<b>👤 CUSTOMER / కస్టమర్</b><br>" + name +
+        "<br><br><b>📍 " + pickup + " ➜ " + drop + "</b>" +
+        "<br><br>🎉 బుకింగ్ విజయవంతంగా నమోదు అయింది.<br>Booking Submitted Successfully.";
 
     document.getElementById("successBox").style.display = "block";
 }
