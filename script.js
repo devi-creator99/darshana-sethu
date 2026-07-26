@@ -16,7 +16,7 @@ function submitBooking() {
     const passengers = document.getElementById("passengers").value;
 
     if (!name || !phone || !pickup || !drop || !trip || !date || !time || !passengers) {
-        alert("దయచేసి అన్ని వివరాలు నమోదు చేయండి.\nPlease fill all details.");
+        alert("⚠️ దయచేసి అన్ని వివరాలు నమోదు చేయండి.\nPlease fill all details.");
         return;
     }
 
@@ -31,7 +31,7 @@ ${bookingId}
 ━━━━━━━━━━━━━━━━━━━━━━
 
 ✅ BOOKING SUCCESSFULLY RECEIVED
-బుకింగ్ విజయవంతంగా స్వీకరించబడింది
+బుకింగ్ విజయవంతంగా నమోదు అయింది
 
 👤 CUSTOMER NAME / కస్టమర్ పేరు
 ${name}
@@ -72,13 +72,12 @@ Darshana Sethu Cab Service
         "_blank"
     );
 
-    document.getElementById("bookingId").innerHTML =
-        "🆔 " + bookingId;
+    document.getElementById("bookingId").textContent = bookingId;
 
     document.getElementById("bookingResult").innerHTML =
-        "<b>👤 CUSTOMER / కస్టమర్</b><br>" + name +
+        "<b>👤 CUSTOMER NAME</b><br>" + name +
         "<br><br><b>📍 " + pickup + " ➜ " + drop + "</b>" +
-        "<br><br>🎉 బుకింగ్ విజయవంతంగా నమోదు అయింది.<br>Booking Submitted Successfully.";
+        "<br><br>🎉 Booking Submitted Successfully<br>బుకింగ్ విజయవంతంగా నమోదు అయింది.";
 
     document.getElementById("successBox").style.display = "block";
 }
