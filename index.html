@@ -4,14 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>🚖 Darshana Sethu Cab</title>
+<title>🚖 Darshana Sethu Cab Service</title>
 
-<link rel="icon" href="logo.png" type="image/png">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu:wght@400;700&display=swap" rel="stylesheet">
-
+<link rel="icon" type="image/png" href="logo.png">
 <link rel="stylesheet" href="style.css">
 </head>
 
@@ -19,88 +14,51 @@
 
 <div class="container">
 
-<img src="logo.png" class="logo">
+<img src="logo.png" class="logo" alt="Darshana Sethu Logo">
 
 <h1>🚖 DARSHANA SETHU CAB</h1>
+
+<h2>దర్శన సేతు క్యాబ్</h2>
 
 <p class="tagline">
 <b>మీ ప్రయాణం... మా బాధ్యత</b><br>
 Your Journey... Our Responsibility
 </p>
 
-<label><b>👤 CUSTOMER NAME / కస్టమర్ పేరు</b></label>
-<input
-type="text"
-id="name"
-style="text-transform:uppercase;font-weight:bold;font-size:18px;"
-placeholder="ENTER CUSTOMER NAME">
+<label>👤 CUSTOMER NAME / కస్టమర్ పేరు</label>
+<input type="text" id="name" oninput="this.value=this.value.toUpperCase()" placeholder="Enter Customer Name">
 
-<label><b>📞 PHONE NUMBER</b></label>
-<input type="tel" id="phone">
+<label>📞 PHONE NUMBER / ఫోన్ నంబర్</label>
+<input type="tel" id="phone" placeholder="Enter Mobile Number">
 
-<label><b>📍 PICKUP LOCATION</b></label>
-<input type="text" id="pickup">
+<label>📍 PICKUP LOCATION / పికప్ స్థలం</label>
+<input type="text" id="pickup" placeholder="Enter Pickup Location">
 
-<label><b>📍 DROP LOCATION</b></label>
-<input type="text" id="drop">
+<label>📍 DROP LOCATION / డ్రాప్ స్థలం</label>
+<input type="text" id="drop" placeholder="Enter Drop Location">
 
-<label><b>🚖 TRIP TYPE</b></label>
-
+<label>🚖 TRIP TYPE / ప్రయాణ రకం</label>
 <select id="trip">
-<option>One Way</option>
-<option>Round Trip</option>
+<option value="">Select Trip Type</option>
+<option>🚖 One Way</option>
+<option>🔁 Round Trip</option>
 </select>
 
-<label><b>📅 JOURNEY DATE</b></label>
+<label>📅 JOURNEY DATE / ప్రయాణ తేదీ</label>
 <input type="date" id="date">
 
-<label><b>🕒 PICKUP TIME</b></label>
-<input type="time" id="time">
-
-<label><b>👥 PASSENGERS</b></label>
-<input type="number" id="passengers">
-
-<button onclick="submitBooking()">
-🚖 BOOK NOW
-</button>
-
-<div id="successBox">
-
-<h2>🎉 BOOKING CONFIRMED</h2>
-
-<div class="booking-id">
-
-🆔 BOOKING ID
-
-<h1 id="bookingId">DSC-2026-000001</h1>
-
-</div>
-
-<p id="bookingResult"></p>
-
-<h3>
-
-🙏 THANK YOU
-
-<br>
-
-DARSHANA SETHU CAB
-
-</h3>
-
-<p>
-
-మీ బుకింగ్ విజయవంతంగా నమోదు అయింది.
-
-మా టీమ్ త్వరలో మిమ్మల్ని సంప్రదిస్తుంది.
-
-</p>
-
-</div>
-
-</div>
-
-<script src="script.js"></script>
-
-</body>
-</html>
+<label>🕒 PICKUP TIME / పికప్ సమయం</label>
+<select id="time">
+<option value="">Select Time</option>
+<option>06:00 AM</option>
+<option>07:00 AM</option>
+<option>08:00 AM</option>
+<option>09:00 AM</option>
+<option>10:00 AM</option>
+<option>11:00 AM</option>
+<option>12:00 PM</option>
+<option>01:00 PM</option>
+<option>02:00 PM</option>
+<option>03:00 PM</option>
+<option>04:00 PM</option>
+<option>05:
