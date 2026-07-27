@@ -1,3 +1,5 @@
+const whatsappNumber = "919849402851";
+
 function generateBookingID() {
     const year = new Date().getFullYear();
     const random = Math.floor(100000 + Math.random() * 900000);
@@ -65,19 +67,22 @@ Darshana Sethu Cab Service
 
 "మీ ప్రయాణం... మా బాధ్యత"`;
 
-    const whatsappNumber = "919849402851";
-
     window.open(
         "https://wa.me/" + whatsappNumber + "?text=" + encodeURIComponent(message),
         "_blank"
     );
 
-    document.getElementById("bookingId").textContent = bookingId;
+    document.getElementById("bookingId").textContent = "🆔 " + bookingId;
 
     document.getElementById("bookingResult").innerHTML =
         "<b>👤 CUSTOMER NAME</b><br>" + name +
         "<br><br><b>📍 " + pickup + " ➜ " + drop + "</b>" +
-        "<br><br>🎉 Booking Submitted Successfully<br>బుకింగ్ విజయవంతంగా నమోదు అయింది.";
+        "<br><br>🎉 Booking Submitted Successfully" +
+        "<br>బుకింగ్ విజయవంతంగా నమోదు అయింది.";
 
     document.getElementById("successBox").style.display = "block";
+
+    document.getElementById("successBox").scrollIntoView({
+        behavior: "smooth"
+    });
 }
