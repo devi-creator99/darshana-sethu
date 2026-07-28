@@ -4,11 +4,13 @@
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>🚖 Darshana Sethu Cab Service</title>
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
-<link rel="icon" type="image/png" href="logo.png">
+<title>Darshana Sethu Cab Service</title>
+
+<link rel="icon" href="logo.png">
 
 <link rel="stylesheet" href="style.css">
 
@@ -18,133 +20,245 @@
 
 <div class="container">
 
-<img src="logo.png" class="logo" alt="Darshana Sethu Logo">
+<img src="logo.png"
+class="logo"
+alt="DSCS Logo">
 
-<h1>🚖 DARSHANA SETHU CAB SERVICE</h1>
-
-<h2>దర్శన సేతు క్యాబ్ సర్వీస్</h2>
+<h1>🚖 Darshana Sethu Cab Service</h1>
 
 <p class="tagline">
-<b>మీ ప్రయాణం... మా బాధ్యత</b><br>
+
+<strong>
+మీ ప్రయాణం... మా బాధ్యత
+</strong>
+
+<br>
+
 Your Journey... Our Responsibility
+
 </p>
 
-<label>👤 CUSTOMER NAME / కస్టమర్ పేరు</label>
+<div class="booking-box">
+
+<h2>
+🚖 BOOK YOUR CAB
+</h2>
+
+<label>
+👤 Customer Name / కస్టమర్ పేరు
+</label>
+
 <input
 type="text"
 id="name"
-placeholder="Enter Customer Name"
-oninput="this.value=this.value.toUpperCase()">
+placeholder="ENTER CUSTOMER NAME"
+style="text-transform:uppercase;">
 
-<label>📞 PHONE NUMBER / ఫోన్ నంబర్</label>
+<label>
+📞 Mobile Number
+</label>
+
 <input
 type="tel"
 id="phone"
-placeholder="Enter Mobile Number">
+maxlength="10"
+placeholder="ENTER MOBILE NUMBER">
 
-<label>📍 PICKUP LOCATION / పికప్ స్థలం</label>
+<label>
+📍 Pickup Location
+</label>
+
 <input
 type="text"
 id="pickup"
-placeholder="Enter Pickup Location">
+placeholder="ENTER PICKUP LOCATION"
+style="text-transform:uppercase;">
 
-<label>📍 DROP LOCATION / డ్రాప్ స్థలం</label>
+<button
+type="button"
+onclick="getLocation()">
+
+📍 USE CURRENT LOCATION
+
+</button>
+
+<label>
+📍 Drop Location
+</label>
+
 <input
 type="text"
 id="drop"
-placeholder="Enter Drop Location">
+placeholder="ENTER DROP LOCATION"
+style="text-transform:uppercase;">
 
-<label>🚖 TRIP TYPE / ప్రయాణ రకం</label>
+<label>
+🚖 Trip Type
+</label>
 
 <select id="trip">
 
-<option value="">Select Trip Type</option>
+<option>ONE WAY</option>
 
-<option value="One Way">
-🚖 One Way
-</option>
-
-<option value="Round Trip">
-🔁 Round Trip
-</option>
+<option>ROUND TRIP</option>
 
 </select>
 
-<label>📅 JOURNEY DATE / ప్రయాణ తేదీ</label>
+<label>
+📅 Journey Date
+</label>
 
 <input
 type="date"
 id="date">
 
-<label>🕒 PICKUP TIME / పికప్ సమయం</label>
+<label>
+🕒 Journey Time
+</label>
 
-<select id="time">
+<input
+type="time"
+id="time">
 
-<option value="">Select Time</option>
-
-<option>06:00 AM</option>
-<option>07:00 AM</option>
-<option>08:00 AM</option>
-<option>09:00 AM</option>
-<option>10:00 AM</option>
-<option>11:00 AM</option>
-<option>12:00 PM</option>
-<option>01:00 PM</option>
-<option>02:00 PM</option>
-<option>03:00 PM</option>
-<option>04:00 PM</option>
-<option>05:00 PM</option>
-<option>06:00 PM</option>
-<option>07:00 PM</option>
-<option>08:00 PM</option>
-<option>09:00 PM</option>
-
-</select>
-  <label>👥 PASSENGERS / ప్రయాణికుల సంఖ్య</label>
+<label>
+👥 Passengers
+</label>
 
 <input
 type="number"
 id="passengers"
-placeholder="Enter Number of Passengers">
+min="1"
+max="20">
 
-<button type="button" onclick="submitBooking()">
-🚖 BOOK NOW / బుకింగ్ పంపండి
+<button
+class="book-btn"
+onclick="bookCab()">
+
+🚖 BOOK NOW
+
 </button>
 
-<div id="successBox" style="display:none;">
+<div
+id="successBox"
+style="display:none;">
 
-<h2>🎉 BOOKING SUCCESSFUL</h2>
+<h2>✅ BOOKING SUCCESSFUL</h2>
 
-<h3>🎉 బుకింగ్ విజయవంతంగా నమోదు అయింది</h3>
+<h3 id="bookingId"></h3>
 
-<div class="booking-id">
-
-🆔 BOOKING ID
-
-<h2 id="bookingId"></h2>
+<p id="bookingMessage"></p>
 
 </div>
 
-<p id="bookingResult"></p>
+</div>
+  <!-- WHY CHOOSE US -->
 
-<p>
+<div class="info-box">
 
-📞 మా టీమ్ త్వరలో మిమ్మల్ని సంప్రదిస్తుంది.<br>
-Our Team Will Contact You Soon.
+<h2>⭐ WHY CHOOSE US</h2>
 
-</p>
+<ul>
 
-<p>
+<li>✅ VERIFIED DRIVERS</li>
 
-🙏 దర్శన సేతు క్యాబ్ సర్వీస్‌ను ఎంచుకున్నందుకు ధన్యవాదాలు.<br>
+<li>✅ SAFE & SECURE JOURNEY</li>
 
-Thank You For Choosing<br>
+<li>✅ 24×7 CUSTOMER SUPPORT</li>
 
-<b>Darshana Sethu Cab Service</b>
+<li>✅ FAST WHATSAPP BOOKING</li>
 
-</p>
+<li>✅ LOCAL & OUTSTATION TRIPS</li>
+
+<li>✅ AFFORDABLE PRICING</li>
+
+</ul>
 
 </div>
+
+<!-- OUR SERVICES -->
+
+<div class="info-box">
+
+<h2>🚖 OUR SERVICES</h2>
+
+<ul>
+
+<li>🏠 LOCAL CAB SERVICE</li>
+
+<li>✈️ AIRPORT PICKUP & DROP</li>
+
+<li>🚆 RAILWAY STATION PICKUP & DROP</li>
+
+<li>🏥 HOSPITAL TRIPS</li>
+
+<li>🙏 TEMPLE TRIPS</li>
+
+<li>🌍 OUTSTATION TRIPS</li>
+
+</ul>
+
+</div>
+
+<!-- CONTACT -->
+
+<div class="info-box">
+
+<h2>📞 CONTACT US</h2>
+
+<p><strong>📱 Mobile:</strong> +91 9849402851</p>
+
+<p><strong>📧 Email:</strong> darshanasethu@gmail.com</p>
+
+<p><strong>📍 Service Area:</strong> KONASEEMA, ANDHRA PRADESH</p>
+
+<p><strong>🕒 Available:</strong> 24 × 7</p>
+
+</div><!-- FOOTER -->
+
+<footer class="footer">
+
+<h2>🚖 DARSHANA SETHU CAB SERVICE</h2>
+
+<p>
+<strong>మీ ప్రయాణం... మా బాధ్యత</strong><br>
+Your Journey... Our Responsibility
+</p>
+
+<div class="footer-links">
+
+<a href="index.html">🏠 HOME</a> |
+
+<a href="about.html">ℹ️ ABOUT</a> |
+
+<a href="services.html">🚖 SERVICES</a>
+
+<br><br>
+
+<a href="contact.html">📞 CONTACT</a> |
+
+<a href="privacy.html">🔒 PRIVACY POLICY</a> |
+
+<a href="terms.html">📜 TERMS & CONDITIONS</a>
+
+</div>
+
+<p>
+📧 darshanasethu@gmail.com
+</p>
+
+<p>
+📞 +91 9849402851
+</p>
+
+<p>
+📍 KONASEEMA, ANDHRA PRADESH
+</p>
+
+<p>
+© 2026 DARSHANA SETHU CAB SERVICE
+</p>
+
+</footer>
 
 </div>
 
