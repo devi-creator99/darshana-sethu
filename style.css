@@ -1,221 +1,246 @@
+/* ===========================
+   DARSHANA SETHU CAB SERVICE
+   STYLE.CSS - PART 1
+=========================== */
+
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,Helvetica,sans-serif;
 }
 
 body{
-background:linear-gradient(135deg,#0D47A1,#1976D2);
-padding:15px;
+    background:#f2f6fb;
+    color:#222;
 }
 
 .container{
-max-width:500px;
-margin:auto;
-background:#fff;
-border-radius:20px;
-padding:20px;
-box-shadow:0 8px 25px rgba(0,0,0,.25);
-}
-
-.header{
-text-align:center;
-margin-bottom:20px;
+    width:95%;
+    max-width:520px;
+    margin:20px auto;
+    background:#fff;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
 }
 
 .logo{
-width:150px;
-height:150px;
-object-fit:contain;
-margin:auto;
-display:block;
-margin-bottom:10px;
+    width:170px;
+    display:block;
+    margin:0 auto 15px;
 }
 
 h1{
-color:#FF9800;
-font-size:28px;
-margin-bottom:10px;
-text-align:center;
+    text-align:center;
+    color:#0d47a1;
+    font-size:34px;
+    font-weight:bold;
+    margin-bottom:10px;
 }
 
 .tagline{
-text-align:center;
-font-size:17px;
-font-weight:bold;
-color:#0D47A1;
-margin-bottom:20px;
+    text-align:center;
+    font-size:20px;
+    line-height:1.7;
+    margin-bottom:25px;
 }
 
 .booking-box{
-background:#F5F9FF;
-border:3px solid #0D47A1;
-border-radius:18px;
-padding:20px;
-margin-bottom:20px;
+    border:5px solid #0d47a1;
+    border-radius:20px;
+    padding:20px;
+    margin-bottom:25px;
+    background:#ffffff;
 }
 
 .booking-box h2{
-text-align:center;
-color:#FF9800;
-margin-bottom:20px;
+    text-align:center;
+    color:#ff9800;
+    font-size:30px;
+    margin-bottom:20px;
 }
 
 label{
-display:block;
-font-weight:bold;
-margin-top:12px;
-margin-bottom:6px;
-color:#333;
-}
-
-input,
+    display:block;
+    font-size:20px;
+    font-weight:bold;
+    margin-top:15px;
+    margin-bottom:8px;
+}input,
 select{
-width:100%;
-padding:12px;
-border:2px solid #ccc;
-border-radius:10px;
-font-size:16px;
-text-transform:uppercase;
+    width:100%;
+    padding:14px;
+    font-size:18px;
+    border:2px solid #0d47a1;
+    border-radius:12px;
+    outline:none;
+    margin-bottom:15px;
+    text-transform:uppercase;
 }
 
 input:focus,
 select:focus{
-border-color:#FF9800;
-outline:none;
+    border-color:#ff9800;
+    box-shadow:0 0 8px rgba(255,152,0,.4);
 }
 
 .book-btn{
-width:100%;
-padding:14px;
-margin-top:20px;
-background:#FF9800;
-color:#fff;
-border:none;
-border-radius:10px;
-font-size:20px;
-font-weight:bold;
-cursor:pointer;
+    width:100%;
+    padding:15px;
+    background:#ff9800;
+    color:#fff;
+    font-size:22px;
+    font-weight:bold;
+    border:none;
+    border-radius:12px;
+    cursor:pointer;
+    transition:.3s;
 }
 
 .book-btn:hover{
-background:#E68900;
-  .info-box{
-background:#FFFFFF;
-border-left:6px solid #FF9800;
-border-radius:15px;
-padding:18px;
-margin-top:20px;
-box-shadow:0 5px 15px rgba(0,0,0,.10);
+    background:#e68900;
+}
+
+#successBox{
+    display:none;
+    margin-top:20px;
+    padding:20px;
+    border-radius:15px;
+    background:#e8f5e9;
+    border:3px solid #4caf50;
+    text-align:center;
+}
+
+#bookingId{
+    font-size:24px;
+    font-weight:bold;
+    color:#d32f2f;
+    margin:15px 0;
+}
+
+#bookingMessage{
+    font-size:17px;
+    line-height:1.6;
+}/* ===== INFO BOXES ===== */
+
+.info-box{
+    background:#ffffff;
+    border:4px solid #0D47A1;
+    border-left:8px solid #FF9800;
+    border-radius:20px;
+    padding:20px;
+    margin-top:25px;
+    margin-bottom:25px;
+    box-shadow:0 6px 18px rgba(0,0,0,.15);
 }
 
 .info-box h2{
-text-align:center;
-color:#0D47A1;
-margin-bottom:15px;
+    text-align:center;
+    color:#0D47A1;
+    font-size:28px;
+    margin-bottom:20px;
 }
 
 .feature,
 .service{
-background:#F5F9FF;
-border:2px solid #0D47A1;
-border-radius:10px;
-padding:12px;
-margin:10px 0;
-font-weight:bold;
-color:#333;
+    background:#F5F9FF;
+    border:2px solid #0D47A1;
+    border-radius:12px;
+    padding:14px;
+    margin:12px 0;
+    font-size:18px;
+    font-weight:bold;
+    color:#222;
 }
 
-#successBox{
-display:none;
-margin-top:20px;
-padding:20px;
-background:#E8F5E9;
-border:3px solid #4CAF50;
-border-radius:15px;
-text-align:center;
+.info-box p{
+    background:#F5F9FF;
+    border:2px solid #0D47A1;
+    border-radius:12px;
+    padding:14px;
+    margin:12px 0;
+    font-size:17px;
+    font-weight:bold;
+    color:#222;
 }
-
-#successBox h2{
-color:#2E7D32;
-margin-bottom:10px;
-}
-
-#bookingId{
-font-size:24px;
-font-weight:bold;
-color:#D32F2F;
-margin:15px 0;
-}
-
-#bookingMessage{
-font-size:16px;
-line-height:1.7;
-color:#333;
-}
+/* ===== FOOTER ===== */
 
 .footer{
-background:#0D47A1;
-color:#FFFFFF;
-padding:20px;
-border-radius:15px;
-margin-top:25px;
-text-align:center;
+    background:#0D47A1;
+    color:#FFFFFF;
+    border-radius:20px;
+    padding:20px;
+    text-align:center;
+    margin-top:25px;
 }
 
 .footer h2{
-color:#FF9800;
-margin-bottom:10px;
+    color:#FF9800;
+    font-size:26px;
+    margin-bottom:12px;
 }
 
 .footer p{
-margin:8px 0;
+    margin:8px 0;
+    font-size:16px;
 }
 
 .footer-links{
-margin:15px 0;
+    margin:15px 0;
 }
 
 .footer-links a{
-color:#FFD54F;
-text-decoration:none;
-font-weight:bold;
-margin:0 5px;
+    color:#FFFFFF;
+    text-decoration:none;
+    font-weight:bold;
+    margin:0 6px;
 }
 
 .footer-links a:hover{
-color:#FFFFFF;
+    color:#FFD54F;
 }
 
-@media (max-width:600px){
+/* ===== MOBILE ===== */
+
+@media(max-width:600px){
 
 .container{
-padding:15px;
+    width:96%;
+    padding:15px;
 }
 
 .logo{
-width:120px;
-height:120px;
+    width:140px;
 }
 
 h1{
-font-size:24px;
+    font-size:28px;
 }
 
-.tagline{
-font-size:15px;
+.booking-box h2,
+.info-box h2,
+.footer h2{
+    font-size:24px;
+}
+
+label{
+    font-size:18px;
 }
 
 input,
-select,
-.book-btn{
-font-size:16px;
+select{
+    font-size:16px;
 }
 
 .book-btn{
-padding:13px;
+    font-size:20px;
 }
 
+.feature,
+.service,
+.info-box p{
+    font-size:16px;
 }
+
 }
