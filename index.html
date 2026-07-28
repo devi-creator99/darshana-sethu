@@ -1,1 +1,218 @@
+<!DOCTYPE html>
+<html lang="te">
+<head>
 
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>🚖 Darshana Sethu Cab Service</title>
+
+<link rel="icon" href="logo.png">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<img src="logo.png" class="logo" alt="Logo">
+
+<h1>🚖 Darshana Sethu Cab Service</h1>
+
+<p class="tagline">
+<strong>మీ ప్రయాణం... మా బాధ్యత</strong><br>
+Your Journey... Our Responsibility
+</p>
+
+<div class="booking-box">
+
+<h2>🚖 Book Your Cab</h2>
+
+<label>👤 Customer Name / కస్టమర్ పేరు</label>
+
+<input
+type="text"
+id="name"
+placeholder="ENTER CUSTOMER NAME"
+style="text-transform:uppercase;">
+
+<label>📞 Mobile Number / మొబైల్ నంబర్</label>
+
+<input
+type="tel"
+id="phone"
+maxlength="10"
+placeholder="ENTER MOBILE NUMBER">
+
+<label>📍 Pickup Location / పికప్ స్థలం</label>
+
+<input
+type="text"
+id="pickup"
+placeholder="ENTER PICKUP LOCATION"
+style="text-transform:uppercase;">
+
+<button
+type="button"
+onclick="getLocation()">
+
+📍 USE CURRENT LOCATION
+
+</button>
+
+<label>📍 Drop Location / డ్రాప్ స్థలం</label>
+
+<input
+type="text"
+id="drop"
+placeholder="ENTER DROP LOCATION"
+style="text-transform:uppercase;">
+
+<label>🚖 Trip Type / ప్రయాణ రకం</label>
+
+<select id="trip">
+
+<option>ONE WAY</option>
+
+<option>ROUND TRIP</option>
+
+</select>
+
+<label>📅 Journey Date / ప్రయాణ తేదీ</label>
+
+<input type="date" id="date">
+
+<label>🕒 Journey Time (AM / PM)</label>
+
+<input type="time" id="time">
+
+<label>👥 Passengers / ప్రయాణికుల సంఖ్య</label>
+
+<input
+type="number"
+id="passengers"
+min="1"
+max="20">
+
+<button
+class="book-btn"
+onclick="bookCab()">
+
+🚖 BOOK NOW
+
+</button>
+
+<div id="successBox" style="display:none;">
+
+<h2>✅ BOOKING SUCCESSFUL</h2>
+
+<h3 id="bookingId"></h3>
+
+<p id="bookingMessage"></p>
+
+</div>
+
+</div>
+<!-- WHY CHOOSE US -->
+
+<div class="info-box">
+
+<h2>⭐ WHY CHOOSE US</h2>
+
+<ul>
+
+<li>✅ Verified Drivers</li>
+
+<li>✅ Safe & Secure Journey</li>
+
+<li>✅ Fast WhatsApp Booking</li>
+
+<li>✅ Local & Outstation Trips</li>
+
+<li>✅ 24×7 Customer Support</li>
+
+<li>✅ Affordable Pricing</li>
+
+</ul>
+
+</div>
+
+<!-- OUR SERVICES -->
+
+<div class="info-box">
+
+<h2>🚖 OUR SERVICES</h2>
+
+<ul>
+
+<li>🏠 LOCAL CAB</li>
+
+<li>✈️ AIRPORT PICKUP & DROP</li>
+
+<li>🚆 RAILWAY STATION PICKUP & DROP</li>
+
+<li>🏥 HOSPITAL TRIPS</li>
+
+<li>🙏 TEMPLE TRIPS</li>
+
+<li>🌍 OUTSTATION TRIPS</li>
+
+</ul>
+
+</div>
+
+<!-- CONTACT -->
+
+<div class="info-box">
+
+<h2>📞 CONTACT US</h2>
+
+<p><strong>📱 Mobile:</strong> +91 9849402851</p>
+
+<p><strong>📧 Email:</strong> darshanasethu@gmail.com</p>
+
+<p><strong>📍 Service Area:</strong> KONASEEMA, ANDHRA PRADESH</p>
+
+</div>
+
+<!-- FOOTER -->
+
+<footer>
+
+<hr>
+
+<p>
+
+<a href="#">HOME</a> |
+
+<a href="#">ABOUT</a> |
+
+<a href="#">CONTACT</a>
+
+</p>
+
+<p>
+
+<a href="#">PRIVACY POLICY</a> |
+
+<a href="#">TERMS & CONDITIONS</a>
+
+</p>
+
+<p>
+
+© 2026 DARSHANA SETHU CAB SERVICE
+
+</p>
+
+</footer>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+  </html>
