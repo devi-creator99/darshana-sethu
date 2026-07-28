@@ -147,3 +147,104 @@ function getLocation(){
     );
 
 }
+const message =
+`━━━━━━━━━━━━━━━━━━━━━━
+🚖 DARSHANA SETHU CAB SERVICE
+━━━━━━━━━━━━━━━━━━━━━━
+
+🆔 BOOKING ID
+${bookingId}
+
+👤 CUSTOMER
+${name}
+
+📞 MOBILE
+${phone}
+
+📍 PICKUP
+${pickup}
+
+📍 DROP
+${drop}
+
+🚖 TRIP
+${trip}
+
+📅 DATE
+${date}
+
+🕒 TIME
+${time}
+
+👥 PASSENGERS
+${passengers}
+
+━━━━━━━━━━━━━━━━━━━━━━
+✅ BOOKING REQUEST RECEIVED
+
+📞 Our Team will contact you shortly
+to confirm your booking.
+
+🙏 Thank You for choosing
+
+🚖 DARSHANA SETHU CAB SERVICE
+
+💙 మీ ప్రయాణం... మా బాధ్యత
+━━━━━━━━━━━━━━━━━━━━━━`;
+
+const whatsapp =
+"https://wa.me/919849402851?text=" +
+encodeURIComponent(message);
+
+window.open(whatsapp,"_blank");
+
+document.getElementById("successBox").style.display="block";
+
+document.getElementById("bookingId").innerHTML=bookingId;
+
+document.getElementById("bookingMessage").innerHTML=
+`
+<b>✅ BOOKING REQUEST RECEIVED</b><br><br>
+
+📞 Our Team will contact you shortly
+to confirm your booking.<br><br>
+
+🙏 Thank You for choosing<br>
+
+<b>🚖 DARSHANA SETHU CAB SERVICE</b>
+`;
+
+}
+
+function getLocation(){
+
+if(!navigator.geolocation){
+
+alert("LOCATION NOT SUPPORTED");
+
+return;
+
+}
+
+navigator.geolocation.getCurrentPosition(
+
+function(position){
+
+const lat=position.coords.latitude.toFixed(6);
+
+const lng=position.coords.longitude.toFixed(6);
+
+document.getElementById("pickup").value=
+`${lat}, ${lng}`.toUpperCase();
+
+},
+
+function(){
+
+alert("PLEASE ALLOW LOCATION PERMISSION");
+
+}
+
+);
+
+}
