@@ -6,39 +6,42 @@ font-family:Arial,sans-serif;
 }
 
 body{
-background:linear-gradient(135deg,#0D47A1,#1565C0);
+background:linear-gradient(135deg,#0D47A1,#1976D2);
 padding:15px;
 }
 
 .container{
 max-width:500px;
 margin:auto;
-background:#fff;
+background:#ffffff;
 border-radius:20px;
 padding:20px;
 box-shadow:0 8px 25px rgba(0,0,0,.25);
 }
 
+.header{
+text-align:center;
+margin-bottom:20px;
+}
+
 .logo{
 width:150px;
-display:block;
-margin:auto;
-margin-bottom:15px;
+height:150px;
+object-fit:contain;
+margin-bottom:10px;
 }
 
 h1{
-text-align:center;
 color:#FF9800;
-font-size:30px;
+font-size:28px;
 margin-bottom:10px;
 }
 
 .tagline{
-text-align:center;
-font-size:18px;
+font-size:17px;
 font-weight:bold;
 color:#0D47A1;
-margin-bottom:20px;
+line-height:1.6;
 }
 
 .booking-box{
@@ -46,21 +49,21 @@ background:#F5F9FF;
 border:3px solid #0D47A1;
 border-radius:18px;
 padding:20px;
-margin-bottom:20px;
+margin-top:20px;
 }
 
 .booking-box h2{
 text-align:center;
 color:#FF9800;
-margin-bottom:15px;
+margin-bottom:20px;
 }
 
 label{
 display:block;
 margin-top:12px;
-margin-bottom:5px;
+margin-bottom:6px;
 font-weight:bold;
-font-size:16px;
+color:#333;
 }
 
 input,
@@ -75,18 +78,18 @@ text-transform:uppercase;
 
 input:focus,
 select:focus{
-border-color:#FF9800;
 outline:none;
+border-color:#FF9800;
 }
 
 button{
 width:100%;
 padding:14px;
 margin-top:15px;
-border:none;
-border-radius:10px;
 background:#0D47A1;
 color:#fff;
+border:none;
+border-radius:10px;
 font-size:17px;
 font-weight:bold;
 cursor:pointer;
@@ -94,7 +97,7 @@ transition:.3s;
 }
 
 button:hover{
-background:#08306b;
+background:#08306B;
 }
 
 .book-btn{
@@ -103,31 +106,34 @@ font-size:20px;
 }
 
 .book-btn:hover{
-background:#E68900;
+background:#F57C00;
 }
-
 .info-box{
-background:#fff;
-border:3px solid #FF9800;
-border-radius:18px;
+background:#FFFFFF;
+border-left:6px solid #FF9800;
+border-radius:15px;
 padding:18px;
-margin-bottom:20px;
-box-shadow:0 4px 10px rgba(0,0,0,.08);
+margin-top:20px;
+box-shadow:0 5px 15px rgba(0,0,0,.10);
 }
 
 .info-box h2{
 text-align:center;
 color:#0D47A1;
-margin-bottom:10px;
+margin-bottom:15px;
 }
 
-.info-box ul{
-padding-left:20px;
-}
-
-.info-box li{
+.feature,
+.service{
+background:#F5F9FF;
+border:2px solid #0D47A1;
+border-radius:10px;
+padding:12px;
 margin:10px 0;
+font-weight:bold;
+color:#333;
 }
+
 #successBox{
 display:none;
 margin-top:20px;
@@ -136,7 +142,6 @@ background:#E8F5E9;
 border:3px solid #4CAF50;
 border-radius:15px;
 text-align:center;
-box-shadow:0 4px 10px rgba(0,0,0,.15);
 }
 
 #successBox h2{
@@ -153,26 +158,22 @@ margin:15px 0;
 
 #bookingMessage{
 font-size:17px;
-color:#333;
 line-height:1.6;
+color:#333;
 }
 
 .footer{
 background:#0D47A1;
-color:#fff;
-border-radius:18px;
+color:#FFFFFF;
 padding:20px;
-text-align:center;
+border-radius:15px;
 margin-top:25px;
+text-align:center;
 }
 
 .footer h2{
 color:#FF9800;
 margin-bottom:10px;
-}
-
-.footer p{
-margin:8px 0;
 }
 
 .footer-links{
@@ -183,56 +184,29 @@ margin:15px 0;
 color:#FFD54F;
 text-decoration:none;
 font-weight:bold;
-margin:0 6px;
+margin:0 5px;
 }
 
 .footer-links a:hover{
-color:#fff;
-}
-
-.whatsapp-btn{
-position:fixed;
-right:20px;
-bottom:20px;
-width:60px;
-height:60px;
-border-radius:50%;
-background:#25D366;
-color:#fff;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:30px;
-text-decoration:none;
-box-shadow:0 5px 15px rgba(0,0,0,.3);
-z-index:999;
+color:#FFFFFF;
 }
 
 @media(max-width:600px){
 
 .container{
-width:100%;
 padding:15px;
 }
 
 .logo{
 width:120px;
+height:120px;
 }
 
 h1{
-font-size:26px;
+font-size:24px;
 }
 
 .tagline{
-font-size:16px;
-}
-
-.booking-box,
-.info-box{
-padding:15px;
-}
-
-label{
 font-size:15px;
 }
 
@@ -244,10 +218,6 @@ font-size:16px;
 
 .book-btn{
 font-size:18px;
-}
-
-.footer{
-font-size:14px;
 }
 
 }
