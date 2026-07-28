@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="te">
+<html lang="en">
 
 <head>
 
@@ -20,17 +20,19 @@ content="width=device-width, initial-scale=1.0">
 
 <div class="container">
 
+<!-- HEADER -->
+
+<header class="header">
+
 <img src="logo.png"
 class="logo"
-alt="DSCS Logo">
+alt="Darshana Sethu Cab Service Logo">
 
-<h1>🚖 Darshana Sethu Cab Service</h1>
+<h1>🚖 DARSHANA SETHU CAB SERVICE</h1>
 
 <p class="tagline">
 
-<strong>
-మీ ప్రయాణం... మా బాధ్యత
-</strong>
+<strong>మీ ప్రయాణం... మా బాధ్యత</strong>
 
 <br>
 
@@ -38,15 +40,15 @@ Your Journey... Our Responsibility
 
 </p>
 
-<div class="booking-box">
+</header>
 
-<h2>
-🚖 BOOK YOUR CAB
-</h2>
+<!-- BOOKING FORM -->
 
-<label>
-👤 Customer Name / కస్టమర్ పేరు
-</label>
+<section class="booking-box">
+
+<h2>🚖 BOOK YOUR CAB</h2>
+
+<label>👤 Customer Name</label>
 
 <input
 type="text"
@@ -54,9 +56,7 @@ id="name"
 placeholder="ENTER CUSTOMER NAME"
 style="text-transform:uppercase;">
 
-<label>
-📞 Mobile Number
-</label>
+<label>📞 Mobile Number</label>
 
 <input
 type="tel"
@@ -64,9 +64,7 @@ id="phone"
 maxlength="10"
 placeholder="ENTER MOBILE NUMBER">
 
-<label>
-📍 Pickup Location
-</label>
+<label>📍 Pickup Location</label>
 
 <input
 type="text"
@@ -82,9 +80,7 @@ onclick="getLocation()">
 
 </button>
 
-<label>
-📍 Drop Location
-</label>
+<label>📍 Drop Location</label>
 
 <input
 type="text"
@@ -92,9 +88,7 @@ id="drop"
 placeholder="ENTER DROP LOCATION"
 style="text-transform:uppercase;">
 
-<label>
-🚖 Trip Type
-</label>
+<label>🚖 Trip Type</label>
 
 <select id="trip">
 
@@ -104,25 +98,19 @@ style="text-transform:uppercase;">
 
 </select>
 
-<label>
-📅 Journey Date
-</label>
+<label>📅 Journey Date</label>
 
 <input
 type="date"
 id="date">
 
-<label>
-🕒 Journey Time
-</label>
+<label>🕒 Journey Time</label>
 
 <input
 type="time"
 id="time">
 
-<label>
-👥 Passengers
-</label>
+<label>👥 Passengers</label>
 
 <input
 type="number"
@@ -142,7 +130,7 @@ onclick="bookCab()">
 id="successBox"
 style="display:none;">
 
-<h2>✅ BOOKING SUCCESSFUL</h2>
+<h2>✅ BOOKING REQUEST RECEIVED</h2>
 
 <h3 id="bookingId"></h3>
 
@@ -150,113 +138,121 @@ style="display:none;">
 
 </div>
 
-</div>
-  <!-- WHY CHOOSE US -->
+</section>
+<!-- WHY CHOOSE US -->
 
-<div class="info-box">
+<section class="info-box">
 
 <h2>⭐ WHY CHOOSE US</h2>
 
-<ul>
+<div class="feature">✅ VERIFIED DRIVERS</div>
 
-<li>✅ VERIFIED DRIVERS</li>
+<div class="feature">✅ SAFE & SECURE JOURNEY</div>
 
-<li>✅ SAFE & SECURE JOURNEY</li>
+<div class="feature">✅ 24×7 CUSTOMER SUPPORT</div>
 
-<li>✅ 24×7 CUSTOMER SUPPORT</li>
+<div class="feature">✅ FAST WHATSAPP BOOKING</div>
 
-<li>✅ FAST WHATSAPP BOOKING</li>
+<div class="feature">✅ LOCAL & OUTSTATION TRIPS</div>
 
-<li>✅ LOCAL & OUTSTATION TRIPS</li>
+<div class="feature">✅ AFFORDABLE PRICING</div>
 
-<li>✅ AFFORDABLE PRICING</li>
-
-</ul>
-
-</div>
+</section>
 
 <!-- OUR SERVICES -->
 
-<div class="info-box">
+<section class="info-box">
 
 <h2>🚖 OUR SERVICES</h2>
 
-<ul>
+<div class="service">🏠 LOCAL CAB SERVICE</div>
 
-<li>🏠 LOCAL CAB SERVICE</li>
+<div class="service">✈️ AIRPORT PICKUP & DROP</div>
 
-<li>✈️ AIRPORT PICKUP & DROP</li>
+<div class="service">🚆 RAILWAY STATION PICKUP & DROP</div>
 
-<li>🚆 RAILWAY STATION PICKUP & DROP</li>
+<div class="service">🏥 HOSPITAL TRIPS</div>
 
-<li>🏥 HOSPITAL TRIPS</li>
+<div class="service">🙏 TEMPLE TRIPS</div>
 
-<li>🙏 TEMPLE TRIPS</li>
+<div class="service">🌍 OUTSTATION TRIPS</div>
 
-<li>🌍 OUTSTATION TRIPS</li>
+</section>
 
-</ul>
+<!-- CUSTOMER REVIEWS -->
 
-</div>
+<section class="info-box">
 
-<!-- CONTACT -->
+<h2>💬 CUSTOMER REVIEWS</h2>
 
-<div class="info-box">
+<p>⭐⭐⭐⭐⭐ Excellent Service</p>
+
+<p>⭐⭐⭐⭐⭐ Safe Journey</p>
+
+<p>⭐⭐⭐⭐⭐ Friendly Drivers</p>
+
+<p>⭐⭐⭐⭐⭐ On Time Pickup</p>
+
+</section>
+<!-- CONTACT US -->
+
+<section class="info-box">
 
 <h2>📞 CONTACT US</h2>
 
-<p><strong>📱 Mobile:</strong> +91 9849402851</p>
+<p><strong>📱 Mobile</strong><br>+91 9849402851</p>
 
-<p><strong>📧 Email:</strong> darshanasethu@gmail.com</p>
+<p><strong>📧 Email</strong><br>darshanasethu@gmail.com</p>
 
-<p><strong>📍 Service Area:</strong> KONASEEMA, ANDHRA PRADESH</p>
+<p><strong>📍 Service Area</strong><br>KONASEEMA, ANDHRA PRADESH</p>
 
-<p><strong>🕒 Available:</strong> 24 × 7</p>
+<p><strong>🕒 Working Hours</strong><br>24 × 7</p>
 
-</div><!-- FOOTER -->
+</section>
+
+<!-- FAQ -->
+
+<section class="info-box">
+
+<h2>❓ FREQUENTLY ASKED QUESTIONS</h2>
+
+<p><strong>Q:</strong> How can I book a cab?</p>
+<p><strong>A:</strong> Fill the booking form and click <b>BOOK NOW</b>.</p>
+
+<br>
+
+<p><strong>Q:</strong> When will I get confirmation?</p>
+<p><strong>A:</strong> Our Team will contact you shortly to confirm your booking.</p>
+
+</section>
+
+<!-- FOOTER -->
 
 <footer class="footer">
 
 <h2>🚖 DARSHANA SETHU CAB SERVICE</h2>
 
-<p>
-<strong>మీ ప్రయాణం... మా బాధ్యత</strong><br>
-Your Journey... Our Responsibility
-</p>
+<p><strong>మీ ప్రయాణం... మా బాధ్యత</strong></p>
 
 <div class="footer-links">
 
-<a href="index.html">🏠 HOME</a> |
+<a href="index.html">HOME</a> |
 
-<a href="about.html">ℹ️ ABOUT</a> |
+<a href="about.html">ABOUT</a> |
 
-<a href="services.html">🚖 SERVICES</a>
+<a href="services.html">SERVICES</a> |
+
+<a href="contact.html">CONTACT</a>
 
 <br><br>
 
-<a href="contact.html">📞 CONTACT</a> |
+<a href="privacy.html">PRIVACY POLICY</a> |
 
-<a href="privacy.html">🔒 PRIVACY POLICY</a> |
-
-<a href="terms.html">📜 TERMS & CONDITIONS</a>
+<a href="terms.html">TERMS & CONDITIONS</a>
 
 </div>
 
-<p>
-📧 darshanasethu@gmail.com
-</p>
-
-<p>
-📞 +91 9849402851
-</p>
-
-<p>
-📍 KONASEEMA, ANDHRA PRADESH
-</p>
-
-<p>
-© 2026 DARSHANA SETHU CAB SERVICE
-</p>
+<p>© 2026 DARSHANA SETHU CAB SERVICE</p>
 
 </footer>
 
