@@ -1,16 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="te">
 
 <head>
 
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Darshana Sethu Cab Service</title>
 
 <link rel="icon" href="logo.png">
-
 <link rel="stylesheet" href="style.css">
 
 </head>
@@ -19,99 +17,52 @@
 
 <div class="container">
 
-<header class="header">
-
-<img src="logo.png" class="logo" alt="Logo">
+<img src="logo.png" class="logo" alt="Darshana Sethu Logo">
 
 <h1>🚖 DARSHANA SETHU CAB SERVICE</h1>
 
 <p class="tagline">
-
-<strong>మీ ప్రయాణం... మా బాధ్యత</strong>
-
-<br>
-
+<strong>మీ ప్రయాణం... మా బాధ్యత</strong><br>
 Your Journey... Our Responsibility
-
 </p>
 
-</header>
-
-<section class="booking-box">
+<div class="booking-box">
 
 <h2>🚖 BOOK YOUR CAB</h2>
 
 <label>👤 Customer Name</label>
-
-<input
-type="text"
-id="name"
-placeholder="ENTER CUSTOMER NAME"
-style="text-transform:uppercase;">
+<input type="text" id="name" placeholder="ENTER CUSTOMER NAME">
 
 <label>📞 Mobile Number</label>
-
-<input
-type="tel"
-id="phone"
-maxlength="10"
-placeholder="ENTER MOBILE NUMBER">
+<input type="tel" id="phone" maxlength="10" placeholder="ENTER MOBILE NUMBER">
 
 <label>📍 Pickup Location</label>
-
-<input
-type="text"
-id="pickup"
-placeholder="SEARCH PICKUP LOCATION">
+<input type="text" id="pickup" placeholder="ENTER PICKUP LOCATION">
 
 <label>📍 Drop Location</label>
-
-<input
-type="text"
-id="drop"
-placeholder="SEARCH DROP LOCATION">
-
+<input type="text" id="drop" placeholder="ENTER DROP LOCATION">
 <label>🚖 Trip Type</label>
-
 <select id="trip">
-
-<option>ONE WAY</option>
-
-<option>ROUND TRIP</option>
-
+    <option>ONE WAY</option>
+    <option>ROUND TRIP</option>
 </select>
 
 <label>📅 Journey Date</label>
-
-<input
-type="date"
-id="date">
+<input type="date" id="date">
 
 <label>🕒 Journey Time</label>
-
-<input
-type="time"
-id="time">
+<input type="time" id="time">
 
 <label>👥 Passengers</label>
+<input type="number" id="passengers" min="1" max="20">
 
-<input
-type="number"
-id="passengers"
-min="1"
-max="20">
-
-<button
-class="book-btn"
-onclick="bookCab()">
-
+<button class="book-btn" onclick="bookCab()">
 🚖 BOOK NOW
-
 </button>
 
 <div id="successBox" style="display:none;">
 
-<h2>✅ BOOKING REQUEST RECEIVED</h2>
+<h2>✅ BOOKING SUCCESSFUL</h2>
 
 <h3 id="bookingId"></h3>
 
@@ -119,50 +70,56 @@ onclick="bookCab()">
 
 </div>
 
-</section>
+</div>
 <!-- WHY CHOOSE US -->
 
-<section class="info-box">
+<div class="info-box">
 
 <h2>⭐ WHY CHOOSE US</h2>
 
-<div class="feature">✅ VERIFIED DRIVERS</div>
+<ul>
 
-<div class="feature">✅ SAFE & SECURE JOURNEY</div>
+<li class="feature">✅ VERIFIED DRIVERS</li>
 
-<div class="feature">✅ ON TIME PICKUP</div>
+<li class="feature">✅ SAFE & SECURE JOURNEY</li>
 
-<div class="feature">✅ 24×7 CUSTOMER SUPPORT</div>
+<li class="feature">✅ ON TIME PICKUP</li>
 
-<div class="feature">✅ LOCAL & OUTSTATION TRIPS</div>
+<li class="feature">✅ 24×7 CUSTOMER SUPPORT</li>
 
-<div class="feature">✅ AFFORDABLE PRICING</div>
+<li class="feature">✅ LOCAL & OUTSTATION TRIPS</li>
 
-</section>
+<li class="feature">✅ AFFORDABLE PRICING</li>
 
+</ul>
+
+</div>
 <!-- OUR SERVICES -->
 
-<section class="info-box">
+<div class="info-box">
 
 <h2>🚖 OUR SERVICES</h2>
 
-<div class="service">🏠 LOCAL CAB SERVICE</div>
+<ul>
 
-<div class="service">✈️ AIRPORT PICKUP & DROP</div>
+<li class="service">🏠 LOCAL CAB SERVICE</li>
 
-<div class="service">🚆 RAILWAY STATION PICKUP & DROP</div>
+<li class="service">✈️ AIRPORT PICKUP & DROP</li>
 
-<div class="service">🏥 HOSPITAL TRIPS</div>
+<li class="service">🚆 RAILWAY STATION PICKUP & DROP</li>
 
-<div class="service">🙏 TEMPLE TRIPS</div>
+<li class="service">🏥 HOSPITAL TRIPS</li>
 
-<div class="service">🌍 OUTSTATION TRIPS</div>
+<li class="service">🙏 TEMPLE TRIPS</li>
 
-</section>
+<li class="service">🌍 OUTSTATION TRIPS</li>
 
+</ul>
+
+</div>
 <!-- CONTACT US -->
 
-<section class="info-box">
+<div class="info-box">
 
 <h2>📞 CONTACT US</h2>
 
@@ -172,18 +129,19 @@ onclick="bookCab()">
 
 <p><strong>📍 Service Area:</strong> KONASEEMA, ANDHRA PRADESH</p>
 
-<p><strong>🕒 Working Hours:</strong> 24 × 7</p>
+<p><strong>🕒 Available:</strong> 24 × 7</p>
 
-</section>
+</div>
 <!-- FOOTER -->
 
 <footer class="footer">
 
 <h2>🚖 DARSHANA SETHU CAB SERVICE</h2>
 
-<p><strong>మీ ప్రయాణం... మా బాధ్యత</strong></p>
-
-<p>Your Journey... Our Responsibility</p>
+<p>
+<strong>మీ ప్రయాణం... మా బాధ్యత</strong><br>
+Your Journey... Our Responsibility
+</p>
 
 <div class="footer-links">
 
@@ -215,15 +173,7 @@ onclick="bookCab()">
 
 </div>
 
-<!-- Google Places Autocomplete -->
 <script src="script.js"></script>
-
-<!-- Replace YOUR_API_KEY with your Google Maps API Key -->
-<script
-src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places&callback=initAutocomplete"
-async
-defer>
-</script>
 
 </body>
 </html>
