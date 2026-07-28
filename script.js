@@ -1,88 +1,149 @@
-const whatsappNumber = "919849402851";
+// =============================
+// DARSHANA SETHU CAB SERVICE
+// =============================
 
-function generateBookingID() {
-    const year = new Date().getFullYear();
-    const random = Math.floor(100000 + Math.random() * 900000);
-    return "DSC-" + year + "-" + random;
+function generateBookingId() {
+
+    const d = new Date();
+
+    const day = String(d.getDate()).padStart(2, "0");
+    const month = String(d.getMonth() + 1).padStart(2, "0");
+    const year = String(d.getFullYear()).slice(-2);
+
+    const random = Math.floor(1000 + Math.random() * 9000);
+
+    return `DSCS-${day}${month}${year}-${random}`;
 }
 
-function submitBooking() {
+function bookCab() {
 
-    const name = document.getElementById("name").value.trim().toUpperCase();
-    const phone = document.getElementById("phone").value.trim();
-    const pickup = document.getElementById("pickup").value.trim();
-    const drop = document.getElementById("drop").value.trim();
-    const trip = document.getElementById("trip").value;
-    const date = document.getElementById("date").value;
-    const time = document.getElementById("time").value;
-    const passengers = document.getElementById("passengers").value;
+    const name =
+    document.getElementById("name").value.trim().toUpperCase();
 
-    if (!name || !phone || !pickup || !drop || !trip || !date || !time || !passengers) {
-        alert("⚠️ దయచేసి అన్ని వివరాలు నమోదు చేయండి.\nPlease fill all details.");
+    const phone =
+    document.getElementById("phone").value.trim();
+
+    const pickup =
+    document.getElementById("pickup").value.trim().toUpperCase();
+
+    const drop =
+    document.getElementById("drop").value.trim().toUpperCase();
+
+    const trip =
+    document.getElementById("trip").value.toUpperCase();
+
+    const date =
+    document.getElementById("date").value;
+
+    const passengers =
+    document.getElementById("passengers").value;
+
+    const time24 =
+    document.getElementById("time").value;
+
+    if (
+        !name ||
+        !phone ||
+        !pickup ||
+        !drop ||
+        !date ||
+        !time24 ||
+        !passengers
+    ) {
+        alert("PLEASE FILL ALL DETAILS");
         return;
     }
 
-    const bookingId = generateBookingID();
+    let [hour, minute] = time24.split(":");
 
-    const message =
-`🚖 DARSHANA SETHU CAB SERVICE
+    hour = parseInt(hour);
 
+    const ampm = hour >= 12 ? "PM" : "AM";
+
+    hour = hour % 12;
+    hour = hour ? hour : 12;
+
+    const time = `${hour}:${minute} ${ampm}`;
+
+    const bookingId = generateBookingId();
+        const message =
+`━━━━━━━━━━━━━━━━━━━━━━
+🚖 DARSHANA SETHU CAB SERVICE
 ━━━━━━━━━━━━━━━━━━━━━━
+
 🆔 BOOKING ID
 ${bookingId}
-━━━━━━━━━━━━━━━━━━━━━━
 
-✅ BOOKING SUCCESSFULLY RECEIVED
-బుకింగ్ విజయవంతంగా నమోదు అయింది
-
-👤 CUSTOMER NAME / కస్టమర్ పేరు
+👤 CUSTOMER
 ${name}
 
-📞 PHONE / ఫోన్
+📞 MOBILE
 ${phone}
 
-📍 PICKUP / పికప్
+📍 PICKUP
 ${pickup}
 
-📍 DROP / డ్రాప్
+📍 DROP
 ${drop}
 
-🚖 TRIP / ప్రయాణ రకం
+🚖 TRIP
 ${trip}
 
-📅 DATE / తేదీ
+📅 DATE
 ${date}
 
-🕒 TIME / సమయం
+🕒 TIME
 ${time}
 
-👥 PASSENGERS / ప్రయాణికుల సంఖ్య
+👥 PASSENGERS
 ${passengers}
 
-⏳ STATUS / స్థితి
-Pending Confirmation
+━━━━━━━━━━━━━━━━━━━━━━
+🙏 THANK YOU FOR CHOOSING
 
-🙏 Thank You
-Darshana Sethu Cab Service
+DARSHANA SETHU CAB SERVICE
 
-"మీ ప్రయాణం... మా బాధ్యత"`;
+🚖 YOUR JOURNEY... OUR RESPONSIBILITY
+━━━━━━━━━━━━━━━━━━━━━━`;
 
-    window.open(
-        "https://wa.me/" + whatsappNumber + "?text=" + encodeURIComponent(message),
-        "_blank"
-    );
+    const whatsapp =
+        "https://wa.me/919849402851?text=" +
+        encodeURIComponent(message);
 
-    document.getElementById("bookingId").textContent = "🆔 " + bookingId;
-
-    document.getElementById("bookingResult").innerHTML =
-        "<b>👤 CUSTOMER NAME</b><br>" + name +
-        "<br><br><b>📍 " + pickup + " ➜ " + drop + "</b>" +
-        "<br><br>🎉 Booking Submitted Successfully" +
-        "<br>బుకింగ్ విజయవంతంగా నమోదు అయింది.";
+    window.open(whatsapp, "_blank");
 
     document.getElementById("successBox").style.display = "block";
+    document.getElementById("bookingId").innerHTML = bookingId;
+    document.getElementById("bookingMessage").innerHTML =
+        "✅ BOOKING REQUEST SENT SUCCESSFULLY";
 
-    document.getElementById("successBox").scrollIntoView({
-        behavior: "smooth"
-    });
+}
+
+function getLocation(){
+
+    if(!navigator.geolocation){
+        alert("LOCATION NOT SUPPORTED");
+        return;
+    }
+
+    navigator.geolocation.getCurrentPosition(
+
+        function(position){
+
+            const lat = position.coords.latitude.toFixed(6);
+            const lng = position.coords.longitude.toFixed(6);
+
+            document.getElementById("pickup").value =
+            `${lat}, ${lng}`.toUpperCase();
+
+        },
+
+        function(){
+
+            alert("PLEASE ALLOW LOCATION PERMISSION");
+
+        }
+
+    );
+
 }
